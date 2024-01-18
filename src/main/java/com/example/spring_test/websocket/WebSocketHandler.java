@@ -15,21 +15,21 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
         switch (msg) {
             case ("1") -> {
                 System.out.println("Dog button was pressed");
-                session.sendMessage(new TextMessage("Woooof"));
+                session.sendMessage(new TextMessage("이지현"));
             }
             case ("2") -> {
                 System.out.println("Cat button was pressed");
-                session.sendMessage(new TextMessage("Meooow"));
+                session.sendMessage(new TextMessage("유원정"));
             }
             case ("3") -> {
                 System.out.println("Pig button was pressed");
-                session.sendMessage(new TextMessage("Bork Bork"));
+                session.sendMessage(new TextMessage("이상환"));
             }
             case ("4") -> {
                 System.out.println("Fox button was pressed");
-                session.sendMessage(new TextMessage("Fraka-kaka-kaka"));
+                session.sendMessage(new TextMessage("멍청이"));
             }
-            default -> System.out.println("Connected to Client");
+            default -> System.out.println("나는 멍청이다.");
         }
     }
 }
