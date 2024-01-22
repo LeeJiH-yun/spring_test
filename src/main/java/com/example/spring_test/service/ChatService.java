@@ -1,7 +1,6 @@
 package com.example.spring_test.service;
 
 import com.example.spring_test.domain.ChatRoom;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +22,7 @@ public class ChatService {
     @PostConstruct
     private void init() {
         chatRooms = new LinkedHashMap<>();
+        chatRooms.put("1", new ChatRoom("1", "이지현???"));
     }
 
     public List<ChatRoom> findAllRoom() {
