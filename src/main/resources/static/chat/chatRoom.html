@@ -35,7 +35,7 @@
     }
 
     // 메세지 수신했을 때 이벤트.
-    socket.onmessage = function (e) {
+    socket.onmessage = function (e) { //클라이언트2에 필요
         console.log(e.data);
         let msgArea = document.querySelector('.msgArea');
         let newMsg = document.createElement('div');
@@ -45,7 +45,7 @@
 
 
     // 메세지 보내기 버튼 눌렀을 떄..
-    function sendMsg() {
+    function sendMsg() { // 클라이언트1에서 필요
         let content = document.querySelector('.content').value;
         const talkMsg = {"type": "TALK", "roomId": [[${room.roomId}]], "sender": "chee", "msg": content};
         socket.send(JSON.stringify(talkMsg));
